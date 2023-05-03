@@ -25,11 +25,17 @@ export async function getStaticPaths() {
 
 
 
-const coffee = () =>{
+const coffee = (props) =>{
+    console.log(props)
     const router = useRouter();
     console.log(router.query);
 
-    return <div>        Page {router.query.id}   </div>
+    return <div> 
+            <h4>{props.coffeeStore.name}</h4>
+            <h4>{props.coffeeStore.websiteUrl}</h4>
+            <h4>{props.coffeeStore.address}</h4>
+            <h4>{props.coffeeStore.neighbourhood}</h4>
+         </div>
 }
 
 export default coffee
