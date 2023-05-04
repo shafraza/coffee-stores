@@ -2,6 +2,9 @@
 
 module.exports = {
   reactStrictMode: false,
+  experiments: {
+    topLevelAwait: true
+  },
   images: {
     remotePatterns: [
       {
