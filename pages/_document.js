@@ -1,11 +1,11 @@
-import { Html, Head, Main, NextScript } from 'next/document'
+import Document, { Head, Html, Main, NextScript } from "next/document";
 
-export default function Document() {
-  return (
-    <Html lang="en">
-
-      <Head>
-      <link
+class MyDocument extends Document {
+  render() {
+    return (
+      <Html lang="en">
+        <Head>
+          <link
             rel="preload"
             href="/fonts/IBMPlexSans-Bold.ttf"
             as="font"
@@ -23,11 +23,14 @@ export default function Document() {
             as="font"
             crossOrigin="anonymous"
           ></link>
-      </Head>
-      <body>
-        <Main />
-        <NextScript />
-      </body>
-    </Html>
-  )
+        </Head>
+        <body>
+          <Main></Main>
+          <NextScript />
+        </body>
+      </Html>
+    );
+  }
 }
+
+export default MyDocument;

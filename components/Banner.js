@@ -1,31 +1,6 @@
-import styles from "../styles/Banner.module.css";
-
-import { useEffect, useState } from 'react';
-
-
+import styles from "./banner.module.css";
 
 const Banner = (props) => {
-
-
-
-  const [coords, setCoords] = useState(null);
-
-  useEffect(() => {
-    if (navigator.geolocation) {
-      navigator.geolocation.getCurrentPosition(position => {
-        setCoords({
-          lat: position.coords.latitude,
-          lng: position.coords.longitude
-        });
-      });
-    } else {
-      console.log("Geolocation is not supported by this browser.");
-    }
-  }, []);
-
-
-
-
   return (
     <div className={styles.container}>
       <h1 className={styles.title}>
@@ -34,9 +9,9 @@ const Banner = (props) => {
       </h1>
       <p className={styles.subTitle}>Discover your local coffee stores!</p>
       <div className={styles.buttonWrapper}>
-        {/* <button className={styles.button} onClick={props.handleOnClick}>
+        <button className={styles.button} onClick={props.handleOnClick}>
           {props.buttonText}
-        </button> */}
+        </button>
       </div>
     </div>
   );

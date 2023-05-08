@@ -1,6 +1,12 @@
-import '@/styles/globals.css'
+import "../styles/globals.css";
+import StoreProvider from "../store/store-context";
 
-export default function App({ Component, pageProps }) {
-  return <div><Component {...pageProps} />
-  </div>
+function MyApp({ Component, pageProps }) {
+  return (
+    <StoreProvider>
+      <Component {...pageProps} />
+    </StoreProvider>
+  );
 }
+
+export default MyApp;
