@@ -2,7 +2,7 @@ function Problem() {
   return (
     <div>
       <h1>
-        You need to configure your environment variables, check the Readme:
+        You need to configure your environment variables
       </h1>
       <p>
         process.env.NEXT_PUBLIC_FOURSQUARE_API_KEY,
